@@ -1,0 +1,74 @@
+workflows:
+  ios-native-quick-start:
+    name: iOS Native
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: "FrootyNator Juice Master"  # <-- Убедитесь, что это правильное название!
+
+    environment:
+      groups:
+        - Master # <-- Используем Variable Group с API-ключами
+
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.Fnytrbmk.Manbrtj
+
+      vars:
+        BUNDLE_ID: "com.Fnytrbmk.Manbrtj"
+        XCODE_WORKSPACE: "FrootyNator Juice Master.xcodeproj"
+        XCODE_SCHEME: "FrootyNator Juice Master"
+        APP_STORE_APPLE_ID: 6745498645
+
+      xcode: latest
+
+    scripts:
+      - name: Очистка кэша Swift Package Manager
+        script: |
+          rm -rf ~/Library/Caches/org.swift.swiftpm
+          rm -rf ~/Library/Developer/Xcode/DerivedData
+          xcodebuild -resolvePackageDependencies
+
+      - name: Set up provisioning profiles settings on Xcode project
+        script: xcode-project use-profiles
+
+      - name: Build ipa for distribution
+        script: | 
+          xcode-project build-ipa \
+            --project "FrootyNator Juice Master.xcodeproj" \
+            --scheme "FrootyNator Juice Master"
+
+      - name: Проверяем переменные среды перед публикацией
+        script: |
+          echo "==> Проверяем API-ключи в окружении:"
+          echo "APP_STORE_API_KEY: ${APP_STORE_API_KEY:0:10}******"
+          echo "APP_STORE_KEY_ID: ${APP_STORE_KEY_ID}"
+          echo "APP_STORE_ISSUER_ID: ${APP_STORE_ISSUER_ID}"
+
+          if [ -z "$APP_STORE_API_KEY" ] || [ -z "$APP_STORE_KEY_ID" ] || [ -z "$APP_STORE_ISSUER_ID" ]; then
+            echo "🚨 Ошибка: Одна из переменных API отсутствует! Проверьте настройки Codemagic."
+            exit 1
+          else
+            echo "✅ API-ключи найдены!"
+          fi
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
+    publishing:
+      email:
+        recipients:
+          - o.chetverykov@upstars.com
+        notify:
+          success: true
+          failure: false
+          
+      app_store_connect:
+        api_key: $APP_STORE_API_KEY
+        key_id: $APP_STORE_KEY_ID
+        issuer_id: $APP_STORE_ISSUER_ID
+        submit_to_testflight: true
+        submit_to_app_store: false
