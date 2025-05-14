@@ -59,3 +59,49 @@ struct LoadingScreenView: View {
         .navigationBarHidden(true) 
     }
 }
+
+import SwiftUI
+
+
+struct LoaderViewNator_Juice_Master: View {
+    @State private var isAnimating = false
+
+    var body: some View {
+        ZStack {
+            ForEach(0..<4) { index in
+                RhombusNator_Juice_Master()
+                    .fill(Color.red)
+                    .frame(width: 16, height: 16)
+                    .rotationEffect(.degrees(Double(index) * 90))
+                    .offset(y: -30)
+                    .rotationEffect(.degrees(isAnimating ? 360 : 0))
+                    .animation(
+                        Animation
+                            .linear(duration: 1.0)
+                            .repeatForever(autoreverses: false)
+                            .delay(0.15 * Double(index)),
+                        value: isAnimating
+                    )
+            }
+        }
+        .frame(width: 80, height: 80)
+        .onAppear {
+            isAnimating = true
+        }
+    }
+}
+
+struct RhombusNator_Juice_Master: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let midX = rect.midX
+        let midY = rect.midY
+        path.move(to: CGPoint(x: midX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: midY))
+        path.addLine(to: CGPoint(x: midX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: midY))
+        path.closeSubpath()
+        return path
+    }
+}
+

@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		134A6C362DD38A320077FF25 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C352DD38A320077FF25 /* OneSignalFramework */; };
+		134A6C392DD38A430077FF25 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C382DD38A430077FF25 /* Swifter */; };
+		134A6C3C2DD38A560077FF25 /* AffiseAttributionLib in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C3B2DD38A560077FF25 /* AffiseAttributionLib */; };
+		134A6C3E2DD38A560077FF25 /* AffiseInternal in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C3D2DD38A560077FF25 /* AffiseInternal */; };
+		134A6C402DD38A560077FF25 /* AffiseModuleAdvertising in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C3F2DD38A560077FF25 /* AffiseModuleAdvertising */; };
+		134A6C422DD38A560077FF25 /* AffiseModuleLink in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C412DD38A560077FF25 /* AffiseModuleLink */; };
+		134A6C442DD38A560077FF25 /* AffiseModulePersistent in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C432DD38A560077FF25 /* AffiseModulePersistent */; };
+		134A6C462DD38A560077FF25 /* AffiseModuleStatus in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C452DD38A560077FF25 /* AffiseModuleStatus */; };
+		134A6C482DD38A560077FF25 /* AffiseModuleSubscription in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C472DD38A560077FF25 /* AffiseModuleSubscription */; };
+		134A6C4A2DD38A560077FF25 /* AffiseSKAdNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C492DD38A560077FF25 /* AffiseSKAdNetwork */; };
+		134A6C4D2DD38B200077FF25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 134A6C4C2DD38B200077FF25 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		096586DF2D8B691B0089E768 /* FrootyNator Juice Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FrootyNator Juice Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +37,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134A6C402DD38A560077FF25 /* AffiseModuleAdvertising in Frameworks */,
+				134A6C362DD38A320077FF25 /* OneSignalFramework in Frameworks */,
+				134A6C462DD38A560077FF25 /* AffiseModuleStatus in Frameworks */,
+				134A6C3E2DD38A560077FF25 /* AffiseInternal in Frameworks */,
+				134A6C442DD38A560077FF25 /* AffiseModulePersistent in Frameworks */,
+				134A6C4D2DD38B200077FF25 /* Alamofire in Frameworks */,
+				134A6C392DD38A430077FF25 /* Swifter in Frameworks */,
+				134A6C482DD38A560077FF25 /* AffiseModuleSubscription in Frameworks */,
+				134A6C422DD38A560077FF25 /* AffiseModuleLink in Frameworks */,
+				134A6C4A2DD38A560077FF25 /* AffiseSKAdNetwork in Frameworks */,
+				134A6C3C2DD38A560077FF25 /* AffiseAttributionLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +90,17 @@
 			);
 			name = "FrootyNator Juice Master";
 			packageProductDependencies = (
+				134A6C352DD38A320077FF25 /* OneSignalFramework */,
+				134A6C382DD38A430077FF25 /* Swifter */,
+				134A6C3B2DD38A560077FF25 /* AffiseAttributionLib */,
+				134A6C3D2DD38A560077FF25 /* AffiseInternal */,
+				134A6C3F2DD38A560077FF25 /* AffiseModuleAdvertising */,
+				134A6C412DD38A560077FF25 /* AffiseModuleLink */,
+				134A6C432DD38A560077FF25 /* AffiseModulePersistent */,
+				134A6C452DD38A560077FF25 /* AffiseModuleStatus */,
+				134A6C472DD38A560077FF25 /* AffiseModuleSubscription */,
+				134A6C492DD38A560077FF25 /* AffiseSKAdNetwork */,
+				134A6C4C2DD38B200077FF25 /* Alamofire */,
 			);
 			productName = "FrootyNator Juice Master";
 			productReference = 096586DF2D8B691B0089E768 /* FrootyNator Juice Master.app */;
@@ -91,9 +127,20 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
+				it,
+				da,
+				es,
 			);
 			mainGroup = 096586D62D8B691B0089E768;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				134A6C342DD38A320077FF25 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+				134A6C372DD38A430077FF25 /* XCRemoteSwiftPackageReference "swifter" */,
+				134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */,
+				134A6C4B2DD38B200077FF25 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 096586E02D8B691B0089E768 /* Products */;
 			projectDirPath = "";
@@ -249,11 +296,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FrootyNator Juice Master/FrootyNator Juice Master.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FrootyNator Juice Master/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FrootyNator-Juice-Master-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is requested solely to power the app’s features; we do not capture or store any camera data.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is requested exclusively to enable voice note recording; your recordings remain private and are neither transmitted nor stored.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We use your photo library to save your favorite memories from the app.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use a tracking ID to gather anonymous usage data, helping us analyze how the app is used and optimize its performance.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,11 +335,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FrootyNator Juice Master/FrootyNator Juice Master.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FrootyNator Juice Master/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FrootyNator-Juice-Master-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is requested solely to power the app’s features; we do not capture or store any camera data.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone access is requested exclusively to enable voice note recording; your recordings remain private and are neither transmitted nor stored.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We use your photo library to save your favorite memories from the app.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use a tracking ID to gather anonymous usage data, helping us analyze how the app is used and optimize its performance.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +391,99 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		134A6C342DD38A320077FF25 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = exactVersion;
+				version = 5.2.10;
+			};
+		};
+		134A6C372DD38A430077FF25 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/affise/sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.49;
+			};
+		};
+		134A6C4B2DD38B200077FF25 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		134A6C352DD38A320077FF25 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C342DD38A320077FF25 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		134A6C382DD38A430077FF25 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C372DD38A430077FF25 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+		134A6C3B2DD38A560077FF25 /* AffiseAttributionLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseAttributionLib;
+		};
+		134A6C3D2DD38A560077FF25 /* AffiseInternal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseInternal;
+		};
+		134A6C3F2DD38A560077FF25 /* AffiseModuleAdvertising */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseModuleAdvertising;
+		};
+		134A6C412DD38A560077FF25 /* AffiseModuleLink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseModuleLink;
+		};
+		134A6C432DD38A560077FF25 /* AffiseModulePersistent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseModulePersistent;
+		};
+		134A6C452DD38A560077FF25 /* AffiseModuleStatus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseModuleStatus;
+		};
+		134A6C472DD38A560077FF25 /* AffiseModuleSubscription */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseModuleSubscription;
+		};
+		134A6C492DD38A560077FF25 /* AffiseSKAdNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C3A2DD38A560077FF25 /* XCRemoteSwiftPackageReference "sdk-ios" */;
+			productName = AffiseSKAdNetwork;
+		};
+		134A6C4C2DD38B200077FF25 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134A6C4B2DD38B200077FF25 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 096586D72D8B691B0089E768 /* Project object */;
 }
